@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile_item"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/profile" />
+    <group>
+        <item android:title="@string/classes">
+            <menu>
+                <item
+                    android:id="@+id/new_class_item"
+                    android:icon="@drawable/ic_baseline_create_24"
+                    android:title="@string/new_class" />
+                <item
+                    android:id="@+id/my_classes_item"
+                    android:icon="@drawable/ic_baseline_list_24"
+                    android:title="@string/my_classes" />
+            </menu>
+        </item>
+    </group>
+
+    <group >
+        <item android:title="@string/people">
+            <menu>
+                <item
+                    android:id="@+id/find_people_item"
+                    android:icon="@drawable/ic_baseline_search_24"
+                    android:title="@string/find_people" />
+                <item
+                    android:id="@+id/followed_item"
+                    android:icon="@drawable/ic_baseline_people_alt_24"
+                    android:title="@string/followed" />
+                <item
+                    android:id="@+id/followers_item"
+                    android:icon="@drawable/ic_baseline_people_alt_24"
+                    android:title="@string/followers" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

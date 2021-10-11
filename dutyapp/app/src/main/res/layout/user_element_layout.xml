@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/secondaryBackgroundColor">
+
+    <ImageView
+        android:id="@+id/elem_user_image"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_avatar" />
+
+    <TextView
+        android:id="@+id/elem_username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="username"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/elem_user_image"
+        app:layout_constraintTop_toTopOf="@+id/elem_user_image" />
+
+    <LinearLayout
+        android:id="@+id/clickable_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/transparent_clickable_bg"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone"></LinearLayout>
+
+    <TextView
+        android:id="@+id/following_user_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Following"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/elem_user_image"
+        app:layout_constraintStart_toStartOf="@+id/elem_username_text" />
+
+    <TextView
+        android:id="@+id/elem_grade_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="11-G"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/elem_grade_field"
+        app:layout_constraintStart_toEndOf="@+id/elem_grade_field" />
+
+    <TextView
+        android:id="@+id/elem_grade_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/grade"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/following_user_field"
+        app:layout_constraintStart_toEndOf="@+id/following_user_field" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/elem_username_text" />
+
+    <View
+        android:id="@+id/elem_photo_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

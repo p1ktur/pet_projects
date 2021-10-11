@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0067CC</color>
+    <color name="colorPrimaryDark">#0047AB</color>
+    <color name="colorAccent">#004789</color>
+    <color name="textColor">#004778</color>
+    <color name="textColorHint">#585858</color>
+    <color name="textColorLight">#FFFFFF</color>
+    <color name="toolbarItemColor">#FFFFFF</color>
+    <color name="buttonForeground">#004789</color>
+    <color name="buttonForegroundLight">#FFFFFF</color>
+    <color name="buttonRipple">#0047AB</color>
+    <color name="buttonRippleLight">#CCE8FF</color>
+    <color name="green">#00B410</color>
+    <color name="powderBlue">#CCE8FF</color>
+    <color name="cobaltBlue">#0047AB</color>
+    <color name="navyBlue">#000080</color>
+    <color name="columbiaBlue">#130561</color>
+    <color name="transparentBlack">#60000000</color>
+    <color name="indigo">#4B0082</color>
+    <color name="mainBackgroundColor">#FFFFFF</color>
+    <color name="secondaryBackgroundColor">#F8F8F8</color>
+    <color name="selection">#73C2FB</color>
+</resources>

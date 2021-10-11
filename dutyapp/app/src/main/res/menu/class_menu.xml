@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/clear_all_debts"
+        android:title="@string/clear_all_debts" />
+    <item
+        android:id="@+id/clear_all_past_duties"
+        android:title="@string/clear_all_past_duties" />
+    <item
+        android:id="@+id/clear_all_pairs_history"
+        android:title="@string/clear_all_pairs_history" />
+    <item
+        android:id="@+id/clear_all_pairs"
+        android:title="@string/clear_all_pairs" />
+    <item
+        android:id="@+id/delete_class_item"
+        android:title="@string/delete_class" />
+</menu>
