@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">xyexperimental1</string>
+    <string name="triangle">triangle</string>
+    <string name="undo">Undo</string>
+    <string name="select">Select</string>
+    <string name="circle">circle</string>
+    <string name="line">line</string>
+    <string name="square">square</string>
+    <string name="point">point</string>
+    <string name="pencil">pencil</string>
+    <string name="clear">Clear</string>
+    <string name="multiselect">Multis</string>
+    <string name="wip">WIP</string>
+    <string name="clear_selection">Clears</string>
+</resources>

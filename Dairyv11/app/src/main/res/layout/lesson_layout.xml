@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="?attr/lessonBackgroundColor"
+    tools:context=".WeekActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lesson_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            tools:text="1."
+            android:textColor="?attr/lessonNumberTextColor"/>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?attr/lessonLinesColor"
+            android:layout_marginStart="10dp"/>
+
+        <EditText
+            android:id="@+id/lesson_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/transparent_bg"
+            android:minWidth="40dp"
+            android:maxWidth="90dp"
+            android:textColor="?attr/lessonTextColor" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?attr/lessonLinesColor"
+            android:layout_marginStart="10dp"/>
+
+        <EditText
+            android:id="@+id/lesson_homework"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/transparent_bg"
+            android:textColor="?attr/lessonTextColor"
+            tools:text=""
+            android:paddingEnd="36dp"/>
+
+        <CheckBox
+            android:id="@+id/lesson_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:buttonTint="?attr/lessonCheckboxColor"
+            android:layout_marginStart="-38dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="6dp"
+        android:background="?attr/lessonLinesColor">
+    </LinearLayout>
+</LinearLayout>

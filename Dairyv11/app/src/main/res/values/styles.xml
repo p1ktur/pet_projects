@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Light application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="scrollBackgroundColor">@color/colorPrimary</item>
+        <item name="weekButtonsBackgroundColor">@color/colorPrimary</item>
+        <item name="urgentListBackgroundColor">@color/colorPrimary</item>
+        <item name="parentBackgroundColor">@color/colorAccent</item>
+        <item name="dayNameTextColor">@color/colorPrimaryDark</item>
+        <item name="weekParametersTextColor">@color/colorPrimaryDark</item>
+        <item name="noUrgentsTextColor">@color/colorPrimaryDark</item>
+        <item name="weekButtonsForegroundColor">@color/colorBlack</item>
+        <item name="weekLinesColor">@color/colorPrimaryDark</item>
+        <item name="rippleColor">@color/colorPrimaryDark</item>
+        <item name="urgentsTextColor">@color/colorBlack</item>
+        <item name="urgentLinesColor">@color/colorBlack</item>
+        <item name="mainDrawerHeaderBackground">@color/colorPrimaryDark</item>
+        <item name="mainDrawerTextColor">@color/colorPrimary</item>
+        <item name="mainDrawerButtonColor">@color/colorPrimary</item>
+        <item name="mainDrawerItemTextColor">@color/colorPrimaryDark</item>
+        <item name="mainDrawerMenuBackground">@color/colorPrimary</item>
+        <item name="mainDrawerItemIconColor">@color/colorPrimaryDark</item>
+        <item name="scrollTextColor">@color/colorBlack</item>
+        <item name="scrollLinesColor">@color/colorPrimaryDark</item>
+        <item name="lessonNumberTextColor">@color/colorPrimaryDark</item>
+        <item name="lessonTextColor">@color/colorBlack</item>
+        <item name="lessonLinesColor">@color/colorPrimaryDark</item>
+        <item name="lessonCheckboxColor">@color/colorPrimaryDark</item>
+        <item name="lessonBackgroundColor">@color/colorPrimary</item>
+        <item name="lessonSelectorColor">@color/colorSelector</item>
+        <item name="lessonButtonBackgroundColor">@color/colorAccent</item>
+        <item name="lessonButtonLinesColor">@color/colorBlack</item>
+        <item name="lessonPickerBackgroundColor">@color/colorAccent</item>
+        <item name="lessonPickerLinesColor">@color/colorBlack</item>
+        <item name="lessonButtonBarLinesColor">@color/colorPrimaryDark</item>
+        <item name="lessonPickerTextColor">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+    </style>
+
+    <!-- Dark application theme. -->
+    <style name="DarkAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorDarkerGray</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="scrollBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="weekButtonsBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="urgentListBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="parentBackgroundColor">@color/colorDarkerGray</item>
+        <item name="dayNameTextColor">@color/colorPrimary</item>
+        <item name="weekParametersTextColor">@color/colorPrimary</item>
+        <item name="noUrgentsTextColor">@color/colorPrimary</item>
+        <item name="weekButtonsForegroundColor">@color/colorPrimary</item>
+        <item name="weekLinesColor">@color/colorPrimaryDark</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+        <item name="urgentsTextColor">@color/colorPrimary</item>
+        <item name="urgentLinesColor">@color/colorPrimary</item>
+        <item name="mainDrawerHeaderBackground">@color/colorDarkerGray</item>
+        <item name="mainDrawerTextColor">@color/colorPrimary</item>
+        <item name="mainDrawerButtonColor">@color/colorPrimary</item>
+        <item name="mainDrawerItemTextColor">@color/colorPrimary</item>
+        <item name="mainDrawerMenuBackground">@color/colorPrimaryDark</item>
+        <item name="mainDrawerItemIconColor">@color/colorPrimary</item>
+        <item name="scrollTextColor">@color/colorPrimary</item>
+        <item name="scrollLinesColor">@color/colorPrimary</item>
+        <item name="lessonNumberTextColor">@color/colorPrimary</item>
+        <item name="lessonTextColor">@color/colorPrimary</item>
+        <item name="lessonLinesColor">@color/colorPrimary</item>
+        <item name="lessonCheckboxColor">@color/colorPrimary</item>
+        <item name="lessonBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="lessonSelectorColor">@color/colorDarkerGray</item>
+        <item name="lessonButtonBackgroundColor">@color/colorDarkerGray</item>
+        <item name="lessonButtonLinesColor">@color/colorPrimary</item>
+        <item name="lessonPickerBackgroundColor">@color/colorPrimaryDark</item>
+        <item name="lessonPickerLinesColor">@color/colorDarkerGray</item>
+        <item name="lessonButtonBarLinesColor">@color/colorPrimary</item>
+        <item name="lessonPickerTextColor">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="LightDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
+    <style name="DarkDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+</resources>

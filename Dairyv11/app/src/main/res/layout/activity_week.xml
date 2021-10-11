@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="?attr/parentBackgroundColor"
+    tools:context=".WeekActivity">
+
+<RelativeLayout
+    android:id="@+id/shadow_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/root_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/week_button_bar"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_bar_height"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/button_bar_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="1dp">
+
+                <TextView
+                    android:id="@+id/day_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_bar_children_height"
+                    android:layout_marginTop="@dimen/button_bar_child_margin"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center"
+                    android:textColor="?attr/dayNameTextColor"
+                    android:textSize="@dimen/button_bar_text_size" />
+
+                <ImageButton
+                    android:id="@+id/clear_day_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/button_bar_child_margin"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="@dimen/button_bar_child_margin"
+                    android:background="@drawable/transparent_ripple_bg"
+                    android:src="@drawable/ic_baseline_delete_36"
+                    android:onClick="clearDayOnClick"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/drawer_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="@dimen/button_bar_child_margin"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_baseline_menu_36"
+                android:background="@drawable/transparent_ripple_bg" />
+
+            <ImageButton
+                android:id="@+id/return_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="@dimen/button_bar_child_margin"
+                android:scaleX="-1"
+                android:background="@drawable/transparent_ripple_bg"
+                android:src="@drawable/ic_baseline_redo_36"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/current_week_text"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="@dimen/button_bar_child_margin"
+                android:text="@string/current_week"
+                android:gravity="center"
+                android:textColor="?attr/dayNameTextColor"
+                android:textSize="@dimen/button_bar_text_size"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/week_back_button"
+                android:layout_width="@dimen/button_bar_children_height"
+                android:layout_height="@dimen/button_bar_children_height"
+                android:layout_marginTop="@dimen/button_bar_child_margin"
+                android:layout_marginStart="@dimen/button_bar_child_margin"
+                android:src="@drawable/ic_baseline_arrow_back_36"
+                android:background="@drawable/transparent_ripple_bg"
+                android:onClick="dayBackOnClick"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mtw_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/monday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/monday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+
+            <TextView
+                android:id="@+id/tuesday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/tuesday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+
+            <TextView
+                android:id="@+id/wednesday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/wednesday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mtw_layout"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:gravity="center">
+
+            <ScrollView
+                android:id="@+id/monday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:background="@drawable/scroll_view"
+                android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/monday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/tuesday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:layout_marginStart="@dimen/scroll_view_margin"
+                android:layout_marginEnd="@dimen/scroll_view_margin"
+                android:background="@drawable/scroll_view"
+                android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/tuesday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/wednesday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:background="@drawable/scroll_view"
+                android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/wednesday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tfs_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/thursday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/thursday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+
+            <TextView
+                android:id="@+id/friday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/friday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+
+            <TextView
+                android:id="@+id/saturday_name"
+                android:layout_width="@dimen/text_day_name_width"
+                android:layout_height="@dimen/names_text_view_height"
+                android:text="@string/saturday"
+                android:textAlignment="gravity"
+                android:gravity="center"
+                android:textSize="@dimen/days_name_text_size"
+                android:textColor="?attr/dayNameTextColor" />
+        </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/tfs_layout"
+             android:layout_width="match_parent"
+             android:layout_height="148dp"
+             android:gravity="center">
+
+             <ScrollView
+                android:id="@+id/thursday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:background="@drawable/scroll_view"
+                 android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                 android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/thursday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/friday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:layout_marginStart="@dimen/scroll_view_margin"
+                android:layout_marginEnd="@dimen/scroll_view_margin"
+                android:background="@drawable/scroll_view"
+                android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/friday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/saturday_scroll"
+                android:layout_width="@dimen/scroll_view_width"
+                android:layout_height="140dp"
+                android:background="@drawable/scroll_view"
+                android:layout_marginBottom="@dimen/scroll_margin_for_elevation"
+                android:layout_marginTop="2dp"
+                android:elevation="@dimen/scroll_view_elevation">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/saturday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/day_layout_padding">
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/week_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/week_back"
+                android:layout_width="@dimen/navigate_button_width"
+                android:layout_height="@dimen/navigate_button_height"
+                android:layout_marginTop="@dimen/navigate_button_margin_top"
+                android:layout_marginEnd="-10dp"
+                android:src="@drawable/ic_navigate_before_black_64dp"
+                android:background="@drawable/navigate_button"
+                android:elevation="4dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/week_text"
+                    android:layout_width="@dimen/week_text_width"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textColor="?attr/weekParametersTextColor"
+                    android:textSize="24sp"
+                    android:text="Week 36"/>
+
+                <TextView
+                    android:id="@+id/week_params"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textColor="?attr/weekParametersTextColor"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="4-10 May 2020"/>
+
+                <TextView
+                    android:id="@+id/today_params"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="?attr/weekParametersTextColor"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:lineSpacingMultiplier="1.1"
+                    android:text="Today: 6 May 2020 Wednesday"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/week_next"
+                android:layout_width="@dimen/navigate_button_width"
+                android:layout_height="@dimen/navigate_button_height"
+                android:layout_marginTop="@dimen/navigate_button_margin_top"
+                android:layout_marginStart="-10dp"
+                android:src="@drawable/ic_navigate_next_black_64dp"
+                android:background="@drawable/navigate_button"
+                android:elevation="4dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/urgent_homework_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-1dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginEnd="-1dp"
+            android:background="@drawable/urgent_list_bg"
+            android:paddingStart="16dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="0dp">
+
+            <TextView
+                android:id="@+id/no_homework_yet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/urgent_homework_list"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="0dp"
+                android:textSize="18sp"
+                android:textColor="?attr/urgentsTextColor"
+                android:text="@string/no_urgent_homework_yet"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/urgent_homework_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/day_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <include layout="@layout/activity_day"/>
+    </RelativeLayout>
+
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/drawer_nav_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    app:headerLayout="@layout/drawer_header"
+    app:menu="@menu/main_menu"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    app:itemTextColor="?attr/mainDrawerItemTextColor"
+    app:itemIconTint="?attr/mainDrawerItemIconColor"
+    android:background="?attr/mainDrawerMenuBackground"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

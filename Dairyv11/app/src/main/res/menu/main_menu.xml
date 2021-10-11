@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nightmode_option" android:title="@string/nightmode" android:icon="@drawable/ic_baseline_brightness_5_24"/>
+    <item android:id="@+id/schedule_option" android:title="@string/schedule_option" android:icon="@drawable/ic_baseline_file_copy_24"/>
+    <item android:id="@+id/clear_all_urgents" android:title="@string/clear_all_urgent_homework" android:icon="@drawable/ic_baseline_format_list_numbered_24"/>
+    <item android:id="@+id/clear_current_week" android:title="@string/clear_current_week" android:icon="@drawable/ic_baseline_delete_24"/>
+    <item android:id="@+id/clear_cache" android:title="@string/clear_all_weeks" android:icon="@drawable/ic_baseline_delete_forever_24"/>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="state_enabled" />
+    <declare-styleable name="ds">
+        <attr name="scrollBackgroundColor" format="color"/>
+        <attr name="weekButtonsBackgroundColor" format="color"/>
+        <attr name="urgentListBackgroundColor" format="color"/>
+        <attr name="parentBackgroundColor" format="color"/>
+        <attr name="dayNameTextColor" format="color"/>
+        <attr name="weekParametersTextColor" format="color"/>
+        <attr name="noUrgentsTextColor" format="color"/>
+        <attr name="weekButtonsForegroundColor" format="color"/>
+        <attr name="weekLinesColor" format="color"/>
+        <attr name="rippleColor" format="color"/>
+        <attr name="urgentsTextColor" format="color"/>
+        <attr name="urgentLinesColor" format="color"/>
+        <attr name="mainDrawerHeaderBackground" format="color"/>
+        <attr name="mainDrawerTextColor" format="color"/>
+        <attr name="mainDrawerButtonColor" format="color"/>
+        <attr name="mainDrawerItemTextColor" format="color"/>
+        <attr name="mainDrawerMenuBackground" format="color"/>
+        <attr name="mainDrawerItemIconColor" format="color"/>
+        <attr name="scrollTextColor" format="color"/>
+        <attr name="scrollLinesColor" format="color"/>
+        <attr name="lessonNumberTextColor" format="color"/>
+        <attr name="lessonTextColor" format="color"/>
+        <attr name="lessonLinesColor" format="color"/>
+        <attr name="lessonCheckboxColor" format="color"/>
+        <attr name="lessonBackgroundColor" format="color"/>
+        <attr name="lessonSelectorColor" format="color"/>
+        <attr name="lessonButtonBackgroundColor" format="color"/>
+        <attr name="lessonButtonLinesColor" format="color"/>
+        <attr name="lessonPickerBackgroundColor" format="color"/>
+        <attr name="lessonPickerLinesColor" format="color"/>
+        <attr name="lessonButtonBarLinesColor" format="color"/>
+        <attr name="lessonPickerTextColor" format="color"/>
+    </declare-styleable>
+</resources>

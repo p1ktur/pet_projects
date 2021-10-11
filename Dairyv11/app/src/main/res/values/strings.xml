@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Dairy</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="schedule_option">Schedule option:</string>
+    <string name="schedule_option_on">Schedule option: On</string>
+    <string name="schedule_option_off">Schedule option: Off</string>
+    <string name="clear_all_weeks">Clear all weeks</string>
+    <string name="clear_current_week">Clear current week</string>
+    <string name="no_urgent_homework_yet">No urgent homework yet</string>
+    <string name="choose_day_to_clear">Choose day to clear</string>
+    <string name="clear_all_urgent_homework">Clear all urgent homework</string>
+    <string name="choose">Choose</string>
+    <string name="drawerOpen">Menu is opened</string>
+    <string name="drawerClose">Menu is closed</string>
+    <string name="nightmode">Dark theme:</string>
+    <string name="nightmode_on">Dark theme: On</string>
+    <string name="nightmode_off">Dark theme: Off</string>
+    <string name="current_week">Current week</string>
+</resources>

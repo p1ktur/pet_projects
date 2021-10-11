@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "160445678977",
+    "firebase_url": "https://dairy-a394b.firebaseio.com",
+    "project_id": "dairy-a394b",
+    "storage_bucket": "dairy-a394b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160445678977:android:051cd54ca98761ac255480",
+        "android_client_info": {
+          "package_name": "com.renatsolocorp.dairy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160445678977-8s0440ue794634nb389ri6t1gs83lsc3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7eAeF3y_L1ZddCFsyKwFZ9_9akFSCKAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160445678977-8s0440ue794634nb389ri6t1gs83lsc3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
