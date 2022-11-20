@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/tableView"
+        android:icon="@drawable/ic_baseline_table_view_24"
+        android:title="Table" />
+    <item
+        android:id="@+id/graphView"
+        android:icon="@drawable/ic_baseline_show_chart_24"
+        android:title="Graph" />
+</menu>

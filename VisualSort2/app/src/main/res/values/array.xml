@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sorting">
+        <item>"Bubble Sort</item>
+        <item>"Selection Sort</item>
+        <item>"Shell Sort</item>
+        <item>"Quick Sort</item>
+        <item>"Merge Sort</item>
+        <item>"Counting Sort</item>
+    </string-array>
+</resources>

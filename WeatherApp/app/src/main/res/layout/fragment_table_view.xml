@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/noDataText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="No weather data"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="@id/tableRecyclerView"
+                app:layout_constraintStart_toStartOf="@id/tableRecyclerView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout12"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/midnight_blue"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Date"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/midnight_blue"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="T, °C"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/midnight_blue"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="P, mm"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/midnight_blue"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/textView3"
+                    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="H, %"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout10"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/midnight_blue"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Wind"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tableRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="380dp"
+                android:minWidth="400dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/midnight_blue"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tableRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/tableRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/tableRecyclerView"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/midnight_blue"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="@+id/tableRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/tableRecyclerView"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@color/midnight_blue"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
+                app:layout_constraintEnd_toStartOf="@+id/tableRecyclerView"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout13"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@color/midnight_blue"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout7"
+                app:layout_constraintStart_toEndOf="@+id/tableRecyclerView"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout13"></LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/white_outlined_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout2">
+
+            <Button
+                android:id="@+id/fetchDataButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Fetch data"
+                app:layout_constraintEnd_toStartOf="@+id/saveDataButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/generateDataButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/generateDataButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Generate Data"
+                app:layout_constraintEnd_toStartOf="@+id/fetchDataButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/saveDataButton"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Save Data"
+                app:layout_constraintBottom_toBottomOf="@+id/fetchDataButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/fetchDataButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/displayHighTempDaysButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Display days with highest temperature"
+                app:layout_constraintEnd_toEndOf="@+id/saveDataButton"
+                app:layout_constraintStart_toStartOf="@+id/generateDataButton"
+                app:layout_constraintTop_toBottomOf="@+id/fetchDataButton" />
+
+            <Button
+                android:id="@+id/displayLowPresDaysButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Display days with lowest pressure"
+                app:layout_constraintEnd_toEndOf="@+id/displayHighTempDaysButton"
+                app:layout_constraintStart_toStartOf="@+id/displayHighTempDaysButton"
+                app:layout_constraintTop_toBottomOf="@+id/displayHighTempDaysButton" />
+
+            <Button
+                android:id="@+id/displayUnchangedWindsDaysButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Display days within which wind direction didn't change"
+                app:layout_constraintEnd_toEndOf="@+id/displayLowPresDaysButton"
+                app:layout_constraintStart_toStartOf="@+id/displayLowPresDaysButton"
+                app:layout_constraintTop_toBottomOf="@+id/displayLowPresDaysButton" />
+
+            <Button
+                android:id="@+id/displayOriginalWeatherButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="Display original weather"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/displayUnchangedWindsDaysButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
